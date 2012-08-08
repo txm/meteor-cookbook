@@ -1,0 +1,94 @@
+<head>
+  <title>Meteor Cookbook</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Meteor Cookbook</h1>
+
+  <div>
+
+    <ul>
+
+      <li><a href="#how-do-i-install-meteor">
+          1. How do I install Meteor?</a></li>
+      <li><a href="#displaying-a-loading-image-until-all-collection-data-is-recevied">
+          2. Displaying a loading image until all Collection data is received.</a></li>
+      <li><a href="#install-a-smart-package">
+          3. How do I install a Smart package?</a></li>
+      <li><a href="#starting-the-meteor-development-server">
+          4. Starting the Meteor development server</a></li>
+      <li><a href="#deploying-your-app-to-meteors-servers">
+          5. Deploying your app to Meteor's servers</a></li>
+      <li><a href="#deploying-your-app-to-your-own-servers">
+          6. Deploying your app to your own servers.</a></li>
+      <li><a href="#bundling-app-for-a-different-architecture">
+          7. Bundling your app for a different architecture</a></li>
+      <li><a href="#">
+          </a></li>
+      <li><a href="#">
+          </a></li>
+      <li><a href="#">
+          </a></li>
+
+    </ul>
+
+  </div>
+
+  <div>
+
+    <p name="how-do-i-install-meteor">
+      <h3>1. How do I install Meteor?</h3>
+      curl install.meteor.com | /bin/sh
+    </p>
+
+    <p name="displaying-a-loading-image-until-all-collection-data-is-recevied">
+      <h3>2. Displaying a loading image until all Collection data is received.</h3>
+      tmeasday: you can use the onComplete callback on the subscription
+      <br>
+      Session.set('loading', true); Meteor.subscribe('foo', function() { Session.set('loading', false); })
+    </p>
+
+    <p name="install-a-smart-package">
+      <h3>3. How do I install a Smart package?</h3>
+      meteor add <package-name>
+    </p>
+
+    <p name="starting-the-meteor-development-server">
+      <h3>4. Starting the Meteor development server</h3>
+      meteor
+    </p>
+
+    <p name="deploying-your-app-to-meteors-servers">
+      <h3>Deploying your app to Meteor's servers</h3>
+      meteor deploy
+    </p>
+
+    <p name="deploying-your-app-to-your-own-servers">
+      <h3>6. Deploying your app to your own servers.</h3>
+      meteor bundle my-meteor-app-bundle.tgz
+    </p>
+
+    <p name="bundling-app-for-a-different-architecture">
+      <h3>Bundling your app for a different architecture</h3>
+      cd server && rm -rf fibers && meteor add fibers
+    </p>
+
+    <p name="">
+      <h3></h3>
+    </p>
+
+    <p name="">
+      <h3></h3>
+    </p>
+
+    <p name="">
+      <h3></h3>
+    </p>
+
+  </div>
+
+</template>
